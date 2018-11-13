@@ -5,11 +5,11 @@
 int main(int argc, char *argv[]) {
 	
 
-	int bingo[N][N];
+	int mybingo[N][N];
+	int combingo[N][N];
 	
-	
-	initiate_bingo();
-	print_bingo(bingo);
+	initiate_bingo(mybingo);
+	print_bingo(mybingo);
 	
 	return 0;
 }

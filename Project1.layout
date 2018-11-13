@@ -9,10 +9,10 @@ CursorRow=7
 TopLine=1
 LeftChar=1
 [Editor_1]
-CursorCol=5
-CursorRow=57
-TopLine=37
+CursorCol=22
+CursorRow=32
+TopLine=27
 LeftChar=1
 [Editors]
-Order=1,0,2
+Order=0,1,2
 Focused=1

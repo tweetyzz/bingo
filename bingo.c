@@ -34,23 +34,25 @@ void initiate_bingo(){
 	
 	
 		
-	for(i=0;i<N;i++){
+	for(i=0;i<N*N;i++){
 		temp[i]=0;
 	}
 		
-
+	
+	
 	for (i=0;i<N;i++){
 		
 		for(j=0;j<N;j++)
-		{
-			if(temp[tem]!= 0)
+		{   
+		    temp[N*N] = 0;
+		    
+			if(temp[tem]== 0)
 			{
 				while(1)
 				{
-					temp[N*N] = 0;
 					tem = rand()%(N*N)+1;
-					bingo[i][j]=tem;
-						temp[tem]= 1;
+				    bingo[i][j]=tem;
+					temp[tem]= 1;
 						break;
 					
 				}
