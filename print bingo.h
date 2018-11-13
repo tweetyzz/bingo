@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 #define N 5
+#include "bingo.h"
 
-void initiate_bingo();
+void print_bingo(int bingo2[N][N]);
 

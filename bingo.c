@@ -28,7 +28,10 @@ void initiate_bingo(){
     for (i=0;i<N;i++){
 		
 		for(j=0;j<N;j++)
+		{
 			bingo[i][j]=0;
+		}
+			
 	} //빙고판 초기화   
 	
 	
@@ -44,44 +47,26 @@ void initiate_bingo(){
 		
 		for(j=0;j<N;j++)
 		{   
-		    temp[N*N] = 0;
-		    
-			if(temp[tem]== 0)
-			{
 				while(1)
 				{
 					tem = rand()%(N*N)+1;
-				    bingo[i][j]=tem;
-					temp[tem]= 1;
-						break;
 					
+					if(temp[tem]== 0)
+					{
+					  bingo[i][j]=tem;
+					  temp[tem]= 1;
+					  break;
+					}
+	
 				}
-			}
+			
 			
 		}
 	}
+	return (bingo[N][N]);
 }
-	
-	
-void print_bingo(int bingo[N][N])
-{
-	int i;
-	int j;
 	
 
-	for (i=0;i<N;i++) 
-	{
-		for(j=0;j<N;j++) 
-		{
-			printf("%u ",bingo[i][j]);
-			
-		}
-		printf("\n");
-	}
-	
-	
-    return;
-}
 
 
 
