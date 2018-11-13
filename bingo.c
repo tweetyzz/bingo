@@ -5,48 +5,82 @@
    3.빙고 개수세는 함수를 만들어함. 
    4.turn수 세는 함수도 만들어야함.
    5.기호함수 m 설정해야함. 
+   6.똑같은 숫자를 또 받을경우 오류의 메세지를 보이고 새로 받아야함.
+   질문 함수가 더 필요하면 함수를 더 생성해도 되는지? 
    */
-   #include <stdlib.h>
+   #include "bingo.h" 
    
-   #define N 5
    
-   void initiate_bingo(){
-   {
-   	int bingo[N][N];
+
+void initiate_bingo(){
    	
+   
+   	int bingo[N][N];
+   	int i,j;
+    int temp[N*N];
+
+    int tem;
+    
    	srand( (unsigned)time(NULL) );
     
-    int rand;
-	//(rand() % n)+1
-    int i,j;
-    int baeyeol[100];
 
-
+	
     for (i=0;i<N;i++){
 		
 		for(j=0;j<N;j++)
+			bingo[i][j]=0;
+	} //빙고판 초기화   
+	
+	
+	
 		
-		bingo[i][j]=0;
-		}
+	for(i=0;i<N;i++){
+		temp[i]=0;
+	}
 		
-		
+
 	for (i=0;i<N;i++){
 		
 		for(j=0;j<N;j++)
-		
-		printf("%d",bingo[i][j]);
+		{
+			if(temp[tem]!= 0)
+			{
+				while(1)
+				{
+					temp[N*N] = 0;
+					tem = rand()%(N*N)+1;
+					bingo[i][j]=tem;
+						temp[tem]= 1;
+						break;
+					
+				}
+			}
+			
 		}
-		
-		
-		for (i=0;i<N;i++){
-		
-		for(j=0;j<N;j++)
-		
-		printf("%d\n",bingo[i][j]);
-		}
-		
-		
 	}
-      printf("\n");
-   }
+}
+	
+	
+void print_bingo(int bingo[N][N])
+{
+	int i;
+	int j;
+	
+
+	for (i=0;i<N;i++) 
+	{
+		for(j=0;j<N;j++) 
+		{
+			printf("%u ",bingo[i][j]);
+			
+		}
+		printf("\n");
+	}
+	
+	
+    return;
+}
+
+
+
    

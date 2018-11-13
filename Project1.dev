@@ -1,6 +1,6 @@
 [Project]
-FileName=bingo.dev
-Name=bingo
+FileName=Project1.dev
+Name=Project1
 Type=1
 Ver=2
 ObjFiles=
@@ -50,6 +50,16 @@ ProductVersion=
 AutoIncBuildNr=0
 SyncProduct=1
 
+[Unit1]
+FileName=main.c
+CompileCpp=0
+Folder=
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
 [Unit2]
 FileName=bingo.c
 CompileCpp=0
@@ -62,16 +72,6 @@ BuildCmd=
 
 [Unit3]
 FileName=bingo.h
-CompileCpp=0
-Folder=
-Compile=1
-Link=1
-Priority=1000
-OverrideBuildCmd=0
-BuildCmd=
-
-[Unit1]
-FileName=main.c
 CompileCpp=0
 Folder=
 Compile=1
