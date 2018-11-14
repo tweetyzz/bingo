@@ -1,8 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "print bingo.h"	
+#define N 5
 
-void print_bingo(int bingo2[N][N])
+void print_bingo(int bingo3[N][N])
 {
 	int i;
 	int j;
@@ -12,11 +13,12 @@ void print_bingo(int bingo2[N][N])
 	{
 		for(j=0;j<N;j++) 
 		{
-			printf("%u ",bingo2[i][j]);
+			printf("%3u",bingo3[i][j]);
 			
 		}
 		printf("\n");
 	}
+	printf("\n");
 	
 	
 
