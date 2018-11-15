@@ -69,6 +69,7 @@ int initiate_bingo(int Bingo[N][N]){
  
 	return 	Bingo[N][N];
 }
+ // 숫자 받는 함수, 빙고 개수 세는 함수,  
 	
 
 
