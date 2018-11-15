@@ -3,5 +3,5 @@
 #include <time.h>
 #define N 5
 
-int initiate_bingo(int Bingo[N][N],int Bingo2[N][N]);
+int initiate_bingo(int Bingo[N][N]);
 

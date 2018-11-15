@@ -13,14 +13,15 @@
    
    
 
-int initiate_bingo(int Bingo[N][N],int Bingo2[N][N]){
+int initiate_bingo(int Bingo[N][N]){
 
    	int i,j;
     int temp[N*N];
 	int tem;
     
-   	srand( (unsigned)time(NULL) );
-    
+   	
+   	//printf("time : %u\n", (unsigned)time(NULL));
+   	//srand( (unsigned)time(NULL) );
 
 	
     for (i=0;i<N;i++){
@@ -65,44 +66,8 @@ int initiate_bingo(int Bingo[N][N],int Bingo2[N][N]){
 	
 	
 	
-	for (i=0;i<N;i++){
-		
-		for(j=0;j<N;j++)
-		{
-			Bingo2[i][j]=0;
-		}
-			
-	} //빙고판 초기화   
-	
-	
-	
-		
-	for(i=0;i<N*N;i++){
-		temp[i]=0;
-	}// 0으로 초기화  
-		
-	
-	
-	for (i=0;i<N;i++){
-		for(j=0;j<N;j++)
-		{   
-				while(1)
-				{
-					tem = rand()%(N*N)+1;
-					
-					if(temp[tem-1]== 0)
-					{
-					  Bingo2[i][j]= tem;
-					  temp[tem-1]= 1;
-					  break;
-					}
-	
-				}
-			
-			
-		}
-	}//난수 발생된 자리 1로 채움 
-	return 	Bingo[N][N],Bingo2[N][N];
+ 
+	return 	Bingo[N][N];
 }
 	
 

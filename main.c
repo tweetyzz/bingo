@@ -9,10 +9,13 @@ void main(int argc, char *argv[]) {
 	int mybingo[N][N];
 	int combingo[N][N];
 	
-	initiate_bingo(mybingo,combingo);
-	print_bingo(mybingo);
 	
-
+    srand( (unsigned)time(NULL) );
+	
+	initiate_bingo(mybingo);
+	print_bingo(mybingo);
+	initiate_bingo(combingo);
+	print_bingo(combingo);
 	
 	return 0;
 }
