@@ -1,6 +1,6 @@
 
    #include "bingo.h" 
-   #define N 4
+   #define N 5
    
    
 

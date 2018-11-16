@@ -1,8 +1,9 @@
 #include "bingo.h"
 #include "print bingo.h"
-#define N 4
+#define N 5
 #include "get_number_byme.h"
-
+#include "process_bingo.h"
+#include "count_bingo.h"
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 void main(int argc, char *argv[]) {
@@ -16,7 +17,7 @@ void main(int argc, char *argv[]) {
 	int count = 0;
 	int check_bingo(int arr[N][N]);
 	int number;
-	int process_bingo(int arr[N][N], int number);
+	
 	int Iwin,comwin;
 	
     srand( (unsigned)time(NULL) );
@@ -28,8 +29,14 @@ void main(int argc, char *argv[]) {
 	print_bingo(combingo);
 	
     get_number_byme(mybingo);
+    process_bingo(mybingo);
+    count_bingo(mybingo);
     
     get_number_bycom(combingo);
+    process_bingo(combingo);
+    count_bingo(combingo);
+    
+
     
 
    /* 

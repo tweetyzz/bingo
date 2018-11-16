@@ -4,4 +4,4 @@
 #define N 5
 #include "bingo.h"
 
-int get_number_byme(int get);
+int count_bingo(int bingo[N][N]);

@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#define N 4
+#define N 5
 #include "bingo.h"
 
 int get_number_byme()
@@ -33,19 +33,19 @@ int get_number_byme()
 					}
 			    }
 
-				else if
+				else if(Bingo[i][j]!=num)
 				   {
 				    printf("오류입니다. 숫자를 다시 입력하세요 : ");
 			        scanf("%d",&num);
 				   }
 				   
-			    else (Bingo[i][j]!=num)
+			    else 
 			    {
 			    	printf("같은 숫자 입니다. 숫자를 다시 입력하세요 : ");
 			    	scanf("%d",&num) ;
 				} 
 				
-				
+				break;
 			    
 			    }
 				
