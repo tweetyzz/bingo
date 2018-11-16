@@ -1,41 +1,45 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#define N 5
+#define N 4
 #include "bingo.h"
 
-int get_number_bycom(int getcom)
+int get_number_bycom()
 {
 	int number;
-	int re;
-	int a;
-	int count=0;
-	int checked[N*N];
-	
-	srand( (unsigned)time(NULL) );
-	
-	
-	
-	do
-	{
-		re=0;
-		number = rand()%(N*N)+1;
+	int re=0;
+	int i,j;
+	int temp[N*N];
+	int tem;
+	int Bingo[N][N];
+	//srand( (unsigned)time(NULL) );
 		
-		if(re==0)
-		{    
-			for(a=1;a<count;a++)
-			{
-				if(checked[a]==number)
+	for(i=0;i<N;i++)
+		{
+		
+		for(j=0;j<N;j++)
+		    {    
+		    printf("!");
+				while(1)
 				{
-					re=1;
-					break;
-					printf("컴퓨터가 선택한 숫자 :%d",a);
+					tem = rand()%(N*N)+1;
+					 
+					if(temp[tem-1]== 0)
+					{
+					  Bingo[i][j]= tem;
+					  temp[tem-1]= 1;
+					  break;
+					}
+	
 				}
-			}
-		}
+			
+		    }
 		
-	}while(re==1);
+	    }
+	    
+	    printf("컴퓨터가 입력한 숫자 : ",tem);
 	
-	
- 
+	 return ;
 }
+ 
+

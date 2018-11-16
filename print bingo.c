@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "print bingo.h"	
-#define N 5
+#define N 4
 
 void print_bingo(int bingo3[N][N])
 {
