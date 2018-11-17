@@ -2,16 +2,18 @@
 #include <stdlib.h>
 #include <time.h>
 #define N 5
+#define M 3
 #include "bingo.h"
 
-int get_number_byme()
+int get_number_byme(int Bingo[N][N])
 {
 	int i,j;
-	int tem;
+	/*int tem;
 	int temp[N*N];
-	int Bingo[N][N];
+	int re=0;*/
+
 	int num;
-	int re=0;
+	
 
 				while(1)
 				{
@@ -52,7 +54,7 @@ int get_number_byme()
 				
 			
 				
-	    
+	   
 	
 }
                 

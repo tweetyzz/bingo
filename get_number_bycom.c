@@ -2,17 +2,18 @@
 #include <stdlib.h>
 #include <time.h>
 #define N 5
+#define M 3
 #include "bingo.h"
 
-int get_number_bycom()
+int get_number_bycom(int Bingo[N][N])
 {
-	int number;
 	int i,j;
 	int temp[N*N];
 	int tem;
-	int Bingo[N][N];
+
 	//srand( (unsigned)time(NULL) );
 	
+
 			while(1)
 				{
 					tem = rand()%(N*N)+1;
@@ -35,9 +36,10 @@ int get_number_bycom()
 				}
 				//컴퓨터로부터 랜덤숫자를 받음 
 	    
-	    printf("컴퓨터가 입력한 숫자 :%d",tem);
+	    printf("컴퓨터가 입력한 숫자 :%d\n",tem);
+	    printf("\n");
+	    
 	
-	 return ;
 }
  
 

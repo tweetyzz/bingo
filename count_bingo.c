@@ -2,13 +2,14 @@
 #include <stdlib.h>
 #include <time.h>
 #define N 5
+#define M 3
 #include "bingo.h"
+
 
 int count_bingo(int bingo[N][N])
 {
 	int i,j;
 	int sum;
-	
 	
 	for(i=0;i<N;i++)
 	{
@@ -66,5 +67,13 @@ int count_bingo(int bingo[N][N])
 	}
 	return 0;
 	
+	
+	/*int count;
+    count+=return 1; 
+	
+	if(sum=M)
+	{
+		printf("ÀÌ°å½À´Ï´Ù");
+	}*/
 }
 	

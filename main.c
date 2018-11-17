@@ -1,6 +1,7 @@
 #include "bingo.h"
 #include "print bingo.h"
 #define N 5
+#define M 3
 #include "get_number_byme.h"
 #include "process_bingo.h"
 #include "count_bingo.h"
@@ -13,29 +14,41 @@ void main(int argc, char *argv[]) {
 	int mybingo[N][N];
 	int combingo[N][N];
 	
-	int checked[N*N];
 	int count = 0;
-	int check_bingo(int arr[N][N]);
+    int num;
+    int tem;
 	int number;
 	
 	int Iwin,comwin;
+	Iwin=0;
+	comwin=0;
+	
 	
     srand( (unsigned)time(NULL) );
 	
 	initiate_bingo(mybingo);
-	print_bingo(mybingo);
-	
 	initiate_bingo(combingo);
+	
+	
+	while((Iwin==0)&(comwin==0))
+	{
+	
+	print_bingo(mybingo);
 	print_bingo(combingo);
 	
+    
     get_number_byme(mybingo);
     process_bingo(mybingo);
-    count_bingo(mybingo);
     
+   
     get_number_bycom(combingo);
     process_bingo(combingo);
-    count_bingo(combingo);
     
+    //Iwin=count_bingo(mybingo);
+    //comwin=count_bingo(combingo);
+		
+	};
+	
 
     
 
