@@ -5,4 +5,4 @@
 #define M 3
 #include "bingo.h"
 
-int count_bingo(int bingo[N][N]);
+int count_bingo(int bingo4[N][N]);

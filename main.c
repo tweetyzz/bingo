@@ -20,8 +20,7 @@ void main(int argc, char *argv[]) {
 	int number;
 	
 	int Iwin,comwin;
-	Iwin=0;
-	comwin=0;
+	
 	
 	
     srand( (unsigned)time(NULL) );
@@ -30,24 +29,31 @@ void main(int argc, char *argv[]) {
 	initiate_bingo(combingo);
 	
 	
-	while((Iwin==0)&(comwin==0))
+	do
 	{
+		Iwin=0;
+	    comwin=0;
 	
 	print_bingo(mybingo);
 	print_bingo(combingo);
 	
     
-    get_number_byme(mybingo);
-    process_bingo(mybingo);
+    number=get_number_byme(mybingo);
+    process_bingo(mybingo,number);
+    process_bingo(combingo,number);
+    
+    
+    
+    number=get_number_bycom(combingo);
+    process_bingo(combingo,number);
+    process_bingo(mybingo,number);
+    
+    Iwin=count_bingo(mybingo);
+    comwin=count_bingo(combingo);
     
    
-    get_number_bycom(combingo);
-    process_bingo(combingo);
-    
-    //Iwin=count_bingo(mybingo);
-    //comwin=count_bingo(combingo);
 		
-	};
+	}while((Iwin<M)&&(comwin<M));
 	
 
     

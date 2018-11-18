@@ -8,4 +8,4 @@
 #include "get_number_bycom.h"
 
 
-int process_bingo(int bingo2[N][N]);
+int process_bingo(int bingo2[N][N],int number);

@@ -11,7 +11,6 @@ int get_number_byme(int Bingo[N][N])
 	/*int tem;
 	int temp[N*N];
 	int re=0;*/
-
 	int num;
 	
 
