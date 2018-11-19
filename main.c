@@ -18,6 +18,7 @@ void main(int argc, char *argv[]) {
     int num;
     int tem;
 	int number;
+	int turn = 1;
 	
 	int Iwin,comwin;
 	
@@ -29,7 +30,7 @@ void main(int argc, char *argv[]) {
 	initiate_bingo(combingo);
 	
 	
-	do
+	while(1)
 	{
 		Iwin=0;
 	    comwin=0;
@@ -48,12 +49,27 @@ void main(int argc, char *argv[]) {
     process_bingo(combingo,number);
     process_bingo(mybingo,number);
     
+    
     Iwin=count_bingo(mybingo);
+    
+    printf("나의 빙고 줄 수는 %d 입니다. \n",Iwin);
+    
+    
     comwin=count_bingo(combingo);
     
-   
-		
-	}while((Iwin<M)&&(comwin<M));
+	printf("상대방의 빙고 줄 수는 %d 입니다. \n",comwin);
+	printf("\n");
+	
+	   
+	if(Iwin == M){
+		printf("승리하셨습니다!(시도횟수 : %d회) \n",turn);	
+		break;
+		}
+	else if (comwin == M){
+		printf("패배하셨습니다!(시도횟수 : %d회) \n",turn);
+		break;
+		}	
+	}
 	
 
     

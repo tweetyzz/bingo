@@ -36,23 +36,6 @@ int get_number_bycom(int Bingo[N][N])
 			    }
 			    printf("컴퓨터가 입력한 숫자 :%d\n",tem);
 	            printf("\n");
-	    
-			/*while(1)
-			
-				{
-					tem = rand()%(N*N)+1;
-					 
-					if(temp[tem-1]== 0)
-					{
-					  Bingo[i][j]= tem;
-					  temp[tem-1]= 1;
-					}
-					else if(temp[tem]== 0)
-					{
-					  Bingo[i][j]= tem;
-					  temp[tem]= 1;
-					}*/
-					
 				
 				
 					

@@ -33,7 +33,7 @@ int process_bingo(int bingo2[N][N],int number)
 	{    	
 		for (j=0;j<N;j++)
 		{
-			if(bingo2[i][j]== tem)
+			if(bingo2[i][j]== num)
 			{
 			    bingo2[i][j] =0;
 			}
