@@ -43,7 +43,7 @@ int get_number_byme(int Bingo[N][N])
 			    else 
 			    {
 			    	printf("같은 숫자 입니다. 숫자를 다시 입력하세요 : ");
-			    	scanf("%d",&num) ;
+			    	scanf("%d",&num);
 				} 
 				
 				break;

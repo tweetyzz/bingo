@@ -7,7 +7,7 @@
 int initiate_bingo(int Bingo[N][N]){
 
    	int i,j;
-    int temp[N*N];
+    int temp[N*N];// 빙고배열의 크기와 같은 일차원 배열을 만듦 
 	int tem;
     
    	
@@ -52,13 +52,13 @@ int initiate_bingo(int Bingo[N][N]){
 			
 			
 		}
-	}//난수 발생된 자리 1로 채움 
+	}//난수 발생된 자리 1로 채움 , 새로운 숫자가 1~N*N사이에서 발생해서 빙고 판 채움  
 
 	
 	
 	
  
-	return 	Bingo[N][N];
+	return 	Bingo[N][N]; // 빙고 판 반환해줌  
 }
  // 숫자 받는 함수, 빙고 개수 세는 함수,  
 	

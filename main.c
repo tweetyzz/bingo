@@ -11,103 +11,68 @@ void main(int argc, char *argv[]) {
 	printf("빙고 게임 시작!\n");
 	printf("\n");
 
-	int mybingo[N][N];
-	int combingo[N][N];
+	int mybingo[N][N]; // 내 빙고판 선언 
+	int combingo[N][N];// 컴퓨터 빙고판 선언 
 	
-	int count = 0;
-    int num;
-    int tem;
-	int number;
-	int turn = 1;
+	int count = 0; //빙고 줄 수 세는 것 
+    int num; //내가 입력하는 숫자  
+    int tem; //컴퓨터가 입력하는 숫자 
+	int number; 
+	int turn = 1; //시도 횟수  
 	
-	int Iwin,comwin;
+	int Iwin,comwin; // 내가 빙고 줄 수  : Iwin, 컴퓨터빙고 줄수  :comwin 
 	
 	
 	
-    srand( (unsigned)time(NULL) );
+    srand( (unsigned)time(NULL) ); //난수 발생 
 	
-	initiate_bingo(mybingo);
-	initiate_bingo(combingo);
+	initiate_bingo(mybingo); //내 초기 빙고판  
+	initiate_bingo(combingo);//컴퓨터 초기 빙고판  
 	
 	
 	while(1)
 	{
-		Iwin=0;
-	    comwin=0;
+		Iwin=0; // 내 빙고 줄 수 초기화  
+	    comwin=0;// 컴퓨터 빙고 줄 수 초기화  
 	
-	print_bingo(mybingo);
-	print_bingo(combingo);
+	print_bingo(mybingo); // 내 빙고판 출력  
+	//print_bingo(combingo);
 	
     
-    number=get_number_byme(mybingo);
-    process_bingo(mybingo,number);
-    process_bingo(combingo,number);
+    number=get_number_byme(mybingo); //내 숫자 받는 함수  
+    process_bingo(mybingo,number); //나한테 받은 숫자를 0으로 바꾸는 함수, 내 빙고판에서  
+    process_bingo(combingo,number);//컴퓨터한테 받은 숫자를 0으로 바꾸는 함수, 내 빙고판에서
     
     
     
-    number=get_number_bycom(combingo);
-    process_bingo(combingo,number);
-    process_bingo(mybingo,number);
+    number=get_number_bycom(combingo); //컴퓨터 숫자 받는 함수  
+    process_bingo(combingo,number);//나한테 받은 숫자를 0으로 바꾸는 함수, 컴퓨터  빙고판에서
+    process_bingo(mybingo,number);//컴퓨터한테 받은 숫자를 0으로 바꾸는 함수, 컴퓨터 빙고판에서
     
     
-    Iwin=count_bingo(mybingo);
     
-    printf("나의 빙고 줄 수는 %d 입니다. \n",Iwin);
+    Iwin=count_bingo(mybingo);// 0 개수 줄 별로 세는 함수 , 내 빙고판에서  
+    
+    printf("나의 빙고 줄 수는 %d 입니다. \n",Iwin); //내 빙고 줄 수 출력  
     
     
-    comwin=count_bingo(combingo);
+    comwin=count_bingo(combingo);// 0개수 줄 별로 세는 함수 , 컴퓨터 빙고판에서  
     
-	printf("상대방의 빙고 줄 수는 %d 입니다. \n",comwin);
+	printf("상대방의 빙고 줄 수는 %d 입니다. \n",comwin); // 컴퓨터 줄 수 출력  
 	printf("\n");
 	
-	   
+	turn++;// 판 수 세는거. 근데 초기 함수 출력도 같이 세서 아래에서 -1 해줌. 
+	  
 	if(Iwin == M){
-		printf("승리하셨습니다!(시도횟수 : %d회) \n",turn);	
+		printf("승리하셨습니다!(시도횟수 : %d회) \n",turn-1);//M 과 내 빙고 줄 수가 같을 때 승리하셨습니다 출력. turn-1 한 이유는 위에 있음. 
 		break;
 		}
 	else if (comwin == M){
-		printf("패배하셨습니다!(시도횟수 : %d회) \n",turn);
+		printf("패배하셨습니다!(시도횟수 : %d회) \n",turn-1);//M 과 컴퓨터  빙고 줄 수가 같을 때 패배하셨습니다 출력. turn-1 한 이유는 위에 있음.
 		break;
 		}	
 	}
-	
-
-    
-
-   /* 
-   
-   중복인지 확인하는 함수, 입력받은 수는 배열에 넣고 초기화 하고 0 1로 확인
-   	int i,j;
-    int temp[N*N];
-	int tem;
-   
-   
-   
-   do while 이용해서 빙고판 매 턴 마다 출력하는거 만들어야함. 
-   
-   
-   
-   
-   {for (i=0;i<N;i++){
-		
-		for(j=0;j<N;j++)
-		{   
-			while(1)
-				{ 
-				if(temp[tem-1]== 0)
-					{
-					  Bingo[i][j]= tem;
-					  temp[tem-1]= 1;
-					  break;
-					}
-	
-   
-   
-   
-   */
-    
-    
-    
+	 
 	return 0;
 }
 
