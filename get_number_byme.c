@@ -5,12 +5,9 @@
 #define M 3
 #include "bingo.h"
 
-int get_number_byme(int Bingo[N][N])
+int get_number_byme(int Bingo[N][N]) //내 숫자 받는 함수  
 {
 	int i,j;
-	/*int tem;
-	int temp[N*N];
-	int re=0;*/
 	int num;
 	
 
@@ -18,8 +15,9 @@ int get_number_byme(int Bingo[N][N])
 				{
 				    printf("숫자를 입력하세요 : ");
 				    scanf("%d",&num);
+				    printf("\n"); 
 				
-				if(num>0 && num<=N*N)
+				if(num>0 && num<=N*N) //입력한 숫자가 1~N*N사이에 있으면  
 				{
 					 for (i=0;i<N;i++)
 	                {
@@ -28,24 +26,23 @@ int get_number_byme(int Bingo[N][N])
 		                    if (Bingo[i][j]==num)
 		                    {
 		                    	return num;
-							}
+							}//입력한 숫자와 같은 빙고판의 숫자를 num으로 반환 
 		                
 					    }
 					}
+					
+					printf("이미 입력한 숫자입니다. 다시 입력하세요 : ");
+					scanf("%d",&num); //같은 숫자일 경우 다시 숫자를 받도록 함
 			    }
 
 				else if(Bingo[i][j]!=num)
 				   {
-				    printf("오류입니다. 숫자를 다시 입력하세요 : ");
+				    printf("오류입니다. 숫자를 다시 입력하세요 : ");  
 			        scanf("%d",&num);
-				   }
+			        printf("\n"); 
+				   } //빙고판에 없는 숫자를 입력할 경우 다시 숫자를 받도록함
 				   
-			    else 
-			    {
-			    	printf("같은 숫자 입니다. 숫자를 다시 입력하세요 : ");
-			    	scanf("%d",&num);
-				} 
-				
+			    
 				break;
 			    
 			    }

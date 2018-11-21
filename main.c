@@ -39,7 +39,13 @@ void main(int argc, char *argv[]) {
 	//print_bingo(combingo);
 	
     
-    number=get_number_byme(mybingo); //내 숫자 받는 함수  
+    number=get_number_byme(mybingo); //내 숫자 받는 함수
+	if(number==num)
+	{
+		printf("같은 숫자 입니다. 숫자를 다시 입력하세요 : ");
+		scanf("%d",&num);
+	}
+	  
     process_bingo(mybingo,number); //나한테 받은 숫자를 0으로 바꾸는 함수, 내 빙고판에서  
     process_bingo(combingo,number);//컴퓨터한테 받은 숫자를 0으로 바꾸는 함수, 내 빙고판에서
     
@@ -68,7 +74,7 @@ void main(int argc, char *argv[]) {
 		break;
 		}
 	else if (comwin == M){
-		printf("패배하셨습니다!(시도횟수 : %d회) \n",turn-1);//M 과 컴퓨터  빙고 줄 수가 같을 때 패배하셨습니다 출력. turn-1 한 이유는 위에 있음.
+		printf("패배하셨습니다!(시도횟수 : %d회) \n",turn-1);//M 과 컴퓨터 빙고 줄 수가 같을 때 패배하셨습니다 출력. turn-1 한 이유는 위에 있음.
 		break;
 		}	
 	}

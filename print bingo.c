@@ -4,7 +4,7 @@
 #define N 5
 #define M 3
 
-void print_bingo(int bingo3[N][N])
+void print_bingo(int bingo3[N][N])//빙고판 출력함수 
 {
 	int i;
 	int j;
